@@ -1,22 +1,24 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getDatabase } from "firebase/database";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyA8SVdJNUyeDNNZHUOl_0bZ6ji_Rg-SfT0",
-  authDomain: "smartcradlesystem-otp-f2199.firebaseapp.com",
-  projectId: "smartcradlesystem-otp-f2199",
-  storageBucket: "smartcradlesystem-otp-f2199.appspot.com",
-  messagingSenderId: "521702305809",
-  appId: "1:521702305809:web:f48b519bd46f51d32141b0",
-  measurementId: "G-RN6JEZQJ5J"
+  apiKey: "AIzaSyBOBncFpssi5P3Pr-qYW3wsUM9vo6bq1o0",
+  authDomain: "smartsystem-data.firebaseapp.com",
+  databaseURL: "https://smartsystem-data-default-rtdb.firebaseio.com",
+  projectId: "smartsystem-data",
+  storageBucket: "smartsystem-data.appspot.com",
+  messagingSenderId: "359822054843",
+  appId: "1:359822054843:web:204f9c5c51aa9c1d0ae09e",
+  measurementId: "G-0QQXHYV2XY"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
 export const auth = getAuth(app);
+export const db = getDatabase();
+
+
+export default app;
